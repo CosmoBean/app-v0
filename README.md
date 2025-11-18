@@ -198,15 +198,55 @@ gmail-ai-organizer/
 
 ### Running Tests
 
-```bash
-# Backend
-cd backend
-pytest
+We maintain **>80% test coverage** across both backend and frontend.
 
-# Frontend
-cd frontend
-npm test
+**Quick Test:**
+```bash
+./run-tests.sh
 ```
+
+**With Coverage:**
+```bash
+./run-tests.sh --coverage
+```
+
+**Backend Only:**
+```bash
+cd backend
+pytest --cov=app --cov-report=html
+open htmlcov/index.html  # View coverage report
+```
+
+**Frontend Only:**
+```bash
+cd frontend
+npm run test:coverage
+open coverage/index.html  # View coverage report
+```
+
+**Test Options:**
+```bash
+# Verbose output
+./run-tests.sh --verbose
+
+# Backend only
+./run-tests.sh --backend
+
+# Frontend only
+./run-tests.sh --frontend
+
+# Watch mode (frontend)
+cd frontend && npm test -- --watch
+```
+
+See [docs/TESTING.md](docs/TESTING.md) for comprehensive testing guide.
+
+### Test Coverage
+
+- **Backend**: pytest with async support, mocked external APIs
+- **Frontend**: Vitest + React Testing Library
+- **Minimum Coverage**: 80% (lines, functions, branches, statements)
+- **CI/CD**: Automated tests on all PRs via GitHub Actions
 
 ### Docker Deployment
 

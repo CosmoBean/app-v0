@@ -1,0 +1,17 @@
+[run]
+source = backend/app
+omit =
+    */tests/*
+    */migrations/*
+    */__pycache__/*
+    */venv/*
+    */env/*
+
+[report]
+precision = 2
+show_missing = True
+skip_covered = False
+fail_under = 80
+
+[html]
+directory = backend/htmlcov
