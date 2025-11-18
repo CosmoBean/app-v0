@@ -13,7 +13,7 @@ class Settings(BaseSettings):
     APP_NAME: str = "Gmail AI Organizer"
     ENVIRONMENT: str = "development"
     DEBUG: bool = True
-    SECRET_KEY: str
+    SECRET_KEY: str = "unsafe-secret-key-change-in-production"
 
     # Server
     HOST: str = "0.0.0.0"
@@ -22,9 +22,9 @@ class Settings(BaseSettings):
     # Database
     DATABASE_URL: str = "sqlite+aiosqlite:///./gmail_organizer.db"
 
-    # Google OAuth
-    GOOGLE_CLIENT_ID: str
-    GOOGLE_CLIENT_SECRET: str
+    # Google OAuth - provide defaults for testing
+    GOOGLE_CLIENT_ID: str = "mock_client_id.apps.googleusercontent.com"
+    GOOGLE_CLIENT_SECRET: str = "mock_client_secret"
     GOOGLE_REDIRECT_URI: str = "http://localhost:8000/auth/callback"
     GOOGLE_SCOPES: str = "https://www.googleapis.com/auth/gmail.modify,https://www.googleapis.com/auth/calendar"
 

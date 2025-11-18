@@ -2,6 +2,20 @@
 
 An open-source AI-powered email and calendar organization tool that connects to Gmail, intelligently categorizes emails, creates summaries, and provides a conversational interface to manage your inbox and schedule.
 
+[![Tests](https://github.com/yourusername/gmail-ai-organizer/workflows/Tests/badge.svg)](https://github.com/yourusername/gmail-ai-organizer/actions)
+[![Coverage](https://img.shields.io/badge/coverage-%3E80%25-brightgreen)](./docs/TESTING.md)
+
+## 🧪 Quick Test (No API Keys Required!)
+
+```bash
+# Clone and test immediately - no configuration needed!
+git clone <repo>
+cd gmail-ai-organizer
+./run-tests.sh --coverage
+```
+
+All tests use mocked services. No Google/AI API keys required! See [TESTING_QUICKSTART.md](TESTING_QUICKSTART.md) for details.
+
 ## Features
 
 - 🔐 **Secure Gmail Integration** - OAuth2 authentication with Google APIs
